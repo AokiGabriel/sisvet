@@ -572,76 +572,76 @@ html body .wrapper,
 html body .content-wrapper {
     background: #f0f4f6 !important;
 }
-html body aside.main-sidebar,
-html body aside.main-sidebar .sidebar {
+html body :is(.main-sidebar, .app-sidebar),
+html body :is(.main-sidebar, .app-sidebar) .sidebar {
     background: var(--sisvet-sidebar) !important;
     border-right: 0 !important;
 }
-html body aside.main-sidebar {
+html body :is(.main-sidebar, .app-sidebar) {
     box-shadow: 3px 0 18px rgba(23, 59, 66, .12) !important;
 }
-html body aside.main-sidebar .brand-link {
+html body :is(.main-sidebar, .app-sidebar) .brand-link {
     display: block;
     background: var(--sisvet-sidebar) !important;
     color: #fff !important;
     border-bottom: 1px solid #36565c !important;
     padding: 18px 16px !important;
 }
-html body aside.main-sidebar .brand-link .brand-text {
+html body :is(.main-sidebar, .app-sidebar) .brand-link .brand-text {
     color: #fff !important;
     font-size: 17px;
     font-weight: 700;
     letter-spacing: -.3px;
 }
-html body aside.main-sidebar .brand-link .brand-image {
+html body :is(.main-sidebar, .app-sidebar) .brand-link .brand-image {
     background: #edf8f6 !important;
     padding: 4px;
     border-radius: 6px !important;
 }
-html body aside.main-sidebar .user-panel {
+html body :is(.main-sidebar, .app-sidebar) .user-panel {
     background: #21474e !important;
     border: 1px solid #365c62 !important;
     border-radius: 8px;
     margin: 16px 8px !important;
     padding: 10px 8px;
 }
-html body aside.main-sidebar .user-panel .info a,
-html body aside.main-sidebar .user-panel .image,
-html body aside.main-sidebar .user-panel i {
+html body :is(.main-sidebar, .app-sidebar) .user-panel .info a,
+html body :is(.main-sidebar, .app-sidebar) .user-panel .image,
+html body :is(.main-sidebar, .app-sidebar) .user-panel i {
     color: #f1f8fa !important;
 }
-html body aside.main-sidebar .nav-sidebar .nav-link:not(.active),
-html body aside.main-sidebar .nav-sidebar .nav-link:not(.active) p {
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link:not(.active),
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link:not(.active) p {
     color: #dbe9ec !important;
 }
-html body aside.main-sidebar .nav-sidebar .nav-link i {
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link i {
     color: #a4c8ce !important;
 }
-html body aside.main-sidebar .nav-sidebar .nav-link {
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link {
     width: auto;
     margin: 3px 8px;
     padding: 11px 12px;
     border-radius: 8px;
     transition: background-color .15s ease, color .15s ease;
 }
-html body aside.main-sidebar .nav-sidebar .nav-link:not(.active):hover,
-html body aside.main-sidebar .nav-sidebar .nav-link:not(.active):focus-visible,
-html body aside.main-sidebar .nav-sidebar .nav-link:not(.active):hover p {
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link:not(.active):hover,
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link:not(.active):focus-visible,
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link:not(.active):hover p {
     background: var(--sisvet-sidebar-hover) !important;
     color: #fff !important;
 }
-html body aside.main-sidebar .nav-sidebar .nav-link.active,
-html body aside.main-sidebar .nav-sidebar .nav-link.active:hover,
-html body aside.main-sidebar .nav-sidebar .nav-link.active:focus-visible {
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link.active,
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link.active:hover,
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link.active:focus-visible {
     background: #126e68 !important;
     color: #fff !important;
     box-shadow: inset 3px 0 0 #8be0cf;
 }
-html body aside.main-sidebar .nav-sidebar .nav-link.active p,
-html body aside.main-sidebar .nav-sidebar .nav-link.active i {
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link.active p,
+html body :is(.main-sidebar, .app-sidebar) :is(.nav-sidebar, .sidebar-menu) .nav-link.active i {
     color: #fff !important;
 }
-html body aside.main-sidebar .nav-header {
+html body :is(.main-sidebar, .app-sidebar) .nav-header {
     color: #a7c5cb !important;
     background: transparent !important;
     border-top: 1px solid #36565c !important;
@@ -650,11 +650,11 @@ html body aside.main-sidebar .nav-header {
     padding: 20px 16px 8px !important;
     margin-top: 12px;
 }
-html body aside.main-sidebar a:focus-visible {
+html body :is(.main-sidebar, .app-sidebar) a:focus-visible {
     outline-color: #8be0cf;
     outline-offset: 1px;
 }
-html body .main-header.navbar {
+html body :is(.main-header, .app-header).navbar {
     background: #fff !important;
     border-bottom-color: #dce5e9 !important;
     box-shadow: 0 2px 8px rgba(23, 59, 66, .04);
@@ -710,10 +710,50 @@ html body .btn-group > .btn:not(:first-child) { border-top-left-radius: 0; borde
 html body .btn-group > .btn:not(:last-child) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 html body .main-footer { background: #f8fbfb; color: #526476; border-top: 1px solid #dce5e9; }
 @media (prefers-reduced-motion: reduce) {
-    html body .nav-sidebar .nav-link { transition: none; }
+    html body :is(.nav-sidebar, .sidebar-menu) .nav-link { transition: none; }
 }
 @media (max-width: 575px) {
     html body .content-header { padding: 20px 12px 12px; }
     html body .content-wrapper > .content { padding: 8px 12px 20px; }
     html body .card-body { padding: 14px; }
+}
+
+
+/* Jazzmin 3 / AdminLTE 4: a marca possui um contêiner próprio. */
+html body #jazzy-sidebar .sidebar-brand {
+    background: var(--sisvet-sidebar) !important;
+    border-bottom: 1px solid #36565c !important;
+    padding: 0;
+}
+html body #jazzy-sidebar #jazzy-logo {
+    background: transparent !important;
+    border: 0 !important;
+    width: 100%;
+    text-decoration: none;
+}
+html body #jazzy-sidebar .sidebar-wrapper {
+    background: var(--sisvet-sidebar) !important;
+}
+html body #jazzy-sidebar .user-panel {
+    align-items: center;
+    gap: 10px;
+}
+html body #jazzy-sidebar .user-panel .info,
+html body #jazzy-sidebar .user-panel .info span {
+    color: #f1f8fa !important;
+}
+html body #jazzy-sidebar .sidebar-menu .nav-link {
+    max-width: calc(100% - 16px);
+}
+html body .app-main {
+    background: #f0f4f6 !important;
+}
+html body .app-header .nav-link,
+html body .app-header .nav-link i {
+    color: #243746 !important;
+}
+html body .app-header .nav-link:hover,
+html body .app-header .nav-link:focus-visible {
+    background: #e8f3f2 !important;
+    color: #0d5856 !important;
 }
