@@ -993,3 +993,96 @@ html body .related-widget-wrapper-link {
     border-radius: 5px;
 }
 html body .related-widget-wrapper-link:hover { background: #edf5f4; }
+
+/* Fotos do atendimento: mantém a tabela e os controles nativos, sem cortes. */
+html body #fotos-group { min-width: 0; max-width: 100%; }
+html body #fotos-group .tabular { min-width: 0; }
+html body #fotos-group fieldset.module {
+    overflow-x: auto !important;
+    border-radius: 10px !important;
+    padding: 0;
+}
+html body #fotos-group table.table {
+    width: 100%;
+    min-width: 690px;
+    table-layout: fixed;
+    overflow: visible;
+    margin-bottom: 0;
+    border: 0;
+    box-shadow: none;
+    white-space: normal !important;
+}
+html body #fotos-group table.table th,
+html body #fotos-group table.table td {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    vertical-align: top;
+    padding: 14px 12px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+html body #fotos-group table.table th.original,
+html body #fotos-group table.table td.original { width: 36px; padding: 16px 8px; }
+html body #fotos-group .column-imagem { width: 37%; }
+html body #fotos-group .column-descricao { width: 31%; }
+html body #fotos-group .column-criado_em { width: 17%; }
+html body #fotos-group td.field-imagem input[type="file"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 7px;
+    background: #f8fbfb;
+    border: 1px solid #b3c6cd;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+html body #fotos-group input[type="file"]::file-selector-button {
+    background: #e8f3f0;
+    color: #0d5856;
+    border: 1px solid #afcbc5;
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-right: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+html body #fotos-group input[type="file"]:focus-visible {
+    outline: 2px solid #126e68;
+    outline-offset: 2px;
+}
+html body #fotos-group td.field-descricao input {
+    width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+    min-height: 40px;
+}
+html body #fotos-group td.field-criado_em p { margin: 0; line-height: 1.6; font-size: 13px; }
+html body #fotos-group .add-row td {
+    text-align: left !important;
+    padding: 16px 12px;
+    background: #f8fbfb;
+    border-top: 1px solid #dce5e9;
+}
+html body #fotos-group .add-row a {
+    display: inline-flex;
+    align-items: center;
+    white-space: normal !important;
+    line-height: 1.5;
+    padding: 9px 12px;
+    border: 1px solid #b3cfca;
+    border-radius: 6px;
+    color: #0d5856 !important;
+    background: #edf6f4;
+    font-size: 13px;
+    font-weight: 600;
+}
+html body #fotos-group .add-row a:hover { background: #dcefe9; }
+html body #fotos-group .inline-deletelink {
+    display: inline-block;
+    white-space: normal;
+    color: #a51d31 !important;
+    font-size: 13px;
+    padding: 6px 0;
+}
+html body #fotos-group td.delete { text-align: center; }
