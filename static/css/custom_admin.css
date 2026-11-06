@@ -757,3 +757,129 @@ html body .app-header .nav-link:focus-visible {
     background: #e8f3f2 !important;
     color: #0d5856 !important;
 }
+
+/* Proposta de acabamento IHC: somente apresentação, sem alterar fluxos. */
+
+/* Leitura: cabeçalhos de tabela sem caixa alta ou espaçamento excessivo. */
+html body #result_list thead th,
+html body #result_list thead th a,
+html body table.table thead th,
+html body table.table thead th a {
+    color: #24514e !important;
+    background: #edf5f4 !important;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+html body #result_list td,
+html body #result_list tbody th,
+html body table.table td {
+    padding: 12px 14px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+html body #result_list tbody tr:nth-child(even) { background: #f8fafb; }
+html body #result_list tbody tr:hover,
+html body #result_list tbody tr:focus-within { background: #edf6f4 !important; }
+html body #result_list tbody th {
+    background: transparent !important;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 14px;
+}
+html body #result_list tbody a { font-weight: 600; }
+html body #result_list input[type="checkbox"] { accent-color: #126e68; }
+
+/* Agrupamento visual da busca e das ações existentes. */
+html body #change-list-filters {
+    padding: 16px;
+    margin-bottom: 20px;
+    background: #f8fbfb;
+    border: 1px solid #dce5e9;
+    border-radius: 10px;
+}
+html body #changelist-search { gap: 10px !important; }
+html body .change-list-actions { color: #526476; font-size: 14px; }
+html body #changelist-search .btn,
+html body .object-tools .btn,
+html body .submit-row .btn { min-height: 40px; }
+
+/* Formulários: tamanho confortável e textos auxiliares legíveis. */
+html body :is(.app-main, .content-wrapper) :is(input.form-control, select.form-control, select.form-select) {
+    min-height: 40px;
+    font-size: 14px;
+}
+html body :is(.app-main, .content-wrapper) textarea.form-control {
+    line-height: 1.6;
+}
+html body :is(.app-main, .content-wrapper) :is(.help, .help-block, .form-text) {
+    color: #526476 !important;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 6px;
+}
+html body :is(.app-main, .content-wrapper) input::placeholder,
+html body :is(.app-main, .content-wrapper) textarea::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+html body :is(.app-main, .content-wrapper) label.required { font-weight: 700; }
+html body :is(.app-main, .content-wrapper) .errorlist {
+    color: #a51d31;
+    background: #fff1f3;
+    border-left: 3px solid #b4233a;
+    border-radius: 4px;
+    padding: 8px 12px 8px 28px;
+    font-size: 14px;
+}
+html body .nav-tabs .nav-link {
+    border-radius: 6px 6px 0 0;
+    color: #475569 !important;
+}
+html body .nav-tabs .nav-link.active {
+    color: #0d5856 !important;
+    background: #edf6f4 !important;
+    border-bottom: 3px solid #126e68 !important;
+}
+html body .nav-tabs .nav-link:focus-visible,
+html body .page-link:focus-visible,
+html body .btn:focus-visible {
+    outline: 3px solid #126e68;
+    outline-offset: 3px;
+    box-shadow: none;
+}
+html body #jazzy-sidebar .nav-link:focus-visible { outline-color: #8be0cf; }
+
+/* Paginação: seleção atual identificável e números mais fáceis de ler. */
+html body .pagination .page-link {
+    color: #126e68;
+    min-width: 36px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #d5e2e5;
+}
+html body .pagination .active > .page-link {
+    color: #fff;
+    background: #126e68;
+    border-color: #126e68;
+    font-weight: 700;
+}
+html body .pagination .disabled > .page-link {
+    color: #64748b;
+    background: #f1f5f7;
+}
+html body .breadcrumb { font-size: 13px; }
+html body .app-footer {
+    background: #f8fbfb;
+    color: #526476;
+    border-top: 1px solid #dce5e9;
+    font-size: 13px;
+}
+@media (max-width: 575px) {
+    html body #changelist-search #searchbar { min-width: 0 !important; width: 100% !important; }
+    html body #result_list td, html body #result_list tbody th { padding: 10px; }
+}
